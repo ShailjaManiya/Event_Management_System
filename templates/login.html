@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Be Eventful-Just Plan it</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <noscript>
+        <link rel="stylesheet" href="{% static 'css/noscript.css' %}" />
+    </noscript>
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <div id="wrapper" class="fade-in">
+        <!-- Header -->
+        <header id="header">
+            <a href="#" class="logo" style="color:black;">BE EVENTFUL</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="home">HOME</a></li>
+                <li><a href="about">About us</a></li>
+                <li><a href="registration">Sign Up</a></li>
+                <li class="active"><a href="login">Login</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+        </nav>
+        <!--main -->
+        <div id="main">
+            {% for message in messages %}
+            <h3>
+                <span class="login100-form-title p-b-41">
+                    {{message}}
+                </span>
+            </h3>
+            {% endfor %}
+            <div class="register">
+                <form method="POST" action="{% url 'login' %}">
+                    <center>
+                        <h1>Login</h1>
+                    </center>
+                    <hr /><br />
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    {{profile_form.as_p}}
+                    <label style="font-size:20px;font-family:'Ubuntu-Bold'">Username</label>
+                    <input type="text" id="username" name="username">
+                    <br />
+                    <label style="font-size:20px;font-family:'Ubuntu-Bold'">Password</label>
+                    <input type="password" id="password" name="password">
+                    <br />
+                    <br /><br />
+
+                    {{ form.as_p }}
+                    {{profile_form.as_p}}
+                    <input type="submit" value="Submit">
+                    <br />
+                    <br />
+
+                    {% if request.GET.next %}
+                    <input type="hidden" name="next" value="{{request.GET.next}}">
+                    {% endif %}
+
+                    <p style="font-size:20px;font-family:'Ubuntu-Bold'">Don't have an account?
+                        <a href="registration" style="font-size:20px;font-family:'Ubuntu-Bold'"><u>Sign Up</u>
+                    </p>
+                   
+                    <a href="reset_password" style="font-size:20px;font-family:'Ubuntu-Bold'"> Forgot password?
+                </form>
+            </div>
+            <!-- Footer -->
+            <footer>
+                <h3>We are on Social Media Platforms</h3>
+                <ul class="icons alt">
+                    <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a>
+                    </li>
+                    <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
+                    </li>
+                    <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+                </section>
+                </section>
+            </footer>
+
+            <!-- Copyright -->
+            <div id="copyright">
+
+                <ul>
+                    <li style="color:black;">&copy; BE EVENTFUL</li>
+                    <li style="color:black;">Design: <a href="#">JUST PLAN IT</a></li>
+                </ul>
+            </div>
+
+        </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+        <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+        <script src="{% static 'js/browser.min.js' %}"></script>
+        <script src="{% static 'js/breakpoints.min.js' %}"></script>
+        <script src="{% static 'js/util.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+
+{% load static %}  
+
+               
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Be Eventful-Just Plan it</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <noscript>
+        <link rel="stylesheet" href="{% static 'css/noscript.css' %}" />
+    </noscript>
+
+    <style>
+        tr:hover 
+        td{
+            background-color:#A8A8A8;
+        }
+
+        .btn:hover
+        {
+        background-image:none;
+        background-color:white;
+        }
+        
+    </style>
+
+</head>
+
+<body class="is-preload">
+    
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="#" class="logo" style="color:black;">BE EVENTFUL</a>
+        </header>
+        <div id="main">
+    {% for message in messages %}
+		<h3>
+			<span class="login100-form-title p-b-41">
+				{{message}}
+			</span>
+		</h3>
+		{% endfor %}
+    <center><h1>Booking List</h1></center><br/><br/>
+    <table border="2px" style="text-align:center;font-size:18px;border-color:black">
+        <tr style="font-weight: bold;">
+            <tr>
+                <td><b>User</b></td>
+                <td><b>Event</b></td>
+                <td><b>Date</b></td>
+                <td><b>Menu</b></td>
+                <td><b>Details</b></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in booking_list %}
+                <tr>
+                    <td>{{book.Cust}}</td>
+                    <td>{{book.Eve}}</td>
+                    <td>{{book.BookingDate}}</td>
+                    <td>{{book.Menu}}</td>
+                    <td>{{book.Details}}</td>
+                    <td>
+                        <a href="{% url 'booking_status' book.id %}"><button class="btn btn-danger">Approve</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="{% url 'booking_reject' book.id %}"><button class="btn btn-danger">Reject</button></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="container">
+        <br><center><a href="AdminPage"><button class="btn btn">Back</button></a></center>
+    </div>
+    <footer>
+        <h3>FOLLOW US ON SOCIAL MEDIA PLATFORMS</h3>
+        <ul class="icons alt">
+            <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a>
+            </li>
+            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
+            </li>
+            <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+        </section>
+        </section>
+    </footer>
+
+    <!-- Copyright -->
+    <div id="copyright">
+
+        <ul>
+            <li style="color:black;">&copy; BE EVENTFUL</li>
+            <li style="color:black;">Design: <a href="#">JUST PLAN IT</a></li>
+        </ul>
+    </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'js/browser.min.js' %}"></script>
+    <script src="{% static 'js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

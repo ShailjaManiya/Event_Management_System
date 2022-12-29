@@ -1,0 +1,113 @@
+{% load static %}  
+               
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Be Eventful-Just Plan it</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <noscript>
+        <link rel="stylesheet" href="{% static 'css/noscript.css' %}" />
+    </noscript>
+
+    <style>
+        tr:hover 
+        td{
+            background-color:#A8A8A8;
+        }
+
+        .btn:hover
+        {
+        background-image:none;
+        background-color:white;
+        }
+        
+    </style>
+
+</head>
+
+<body class="is-preload">
+    
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="#" class="logo" style="color:black;">BE EVENTFUL</a>
+        </header>
+        <div id="main">
+    <center><h1>Staff List</h1></center><br/><br/>
+    <table border="2px" style="text-align:center;font-size:18px;border-color:black">
+        <tr style="font-weight: bold;">
+            <tr>
+                <td><b>Name</b></td>
+                <td><b>Phone Number</b></td>
+                <td><b>Email</b></td>
+                <td><b>Address</b></td>
+                <td><b>Gender</b></td>
+                <td><b>Date of Birth</b></td>
+                <td><b>Salary</b></td>
+                <td><b>Experience</b></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stff in staff_list %}
+                <tr>
+                    <td>{{stff.Name}}</td>
+                    <td>{{stff.Phone_No}}</td>
+                    <td>{{stff.Email}}</td>
+                    <td>{{stff.Address}}</td>
+                    <td>{{stff.Gender}}</td>
+                    <td>{{stff.Dob}}</td>
+                    <td>{{stff.salary}}</td>
+                    <td>{{stff.experience}}</td>
+                    <td>
+                        <a href="{% url 'staff_update' stff.id %}" style="color:darkblue;">Edit</a>&nbsp;
+                        <a href="{% url 'staff_delete' stff.id %}" style="color:red;">Delete</a>&nbsp;
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="container">
+        <br><center><a href="AdminPage"><button class="btn btn">Back</button></a></center>
+    </div>
+    <footer>
+        <h3>FOLLOW US ON SOCIAL MEDIA PLATFORMS</h3>
+        <ul class="icons alt">
+            <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a>
+            </li>
+            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
+            </li>
+            <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+        </section>
+        </section>
+    </footer>
+
+    <!-- Copyright -->
+    <div id="copyright">
+
+        <ul>
+            <li style="color:black;">&copy; BE EVENTFUL</li>
+            <li style="color:black;">Design: <a href="#">JUST PLAN IT</a></li>
+        </ul>
+    </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+    <script src="{% static 'js/browser.min.js' %}"></script>
+    <script src="{% static 'js/breakpoints.min.js' %}"></script>
+    <script src="{% static 'js/util.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

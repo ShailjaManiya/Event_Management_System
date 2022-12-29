@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Registration</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+    
+    <div class="register">
+<form>
+    <center><h1>Registration Form</h1></center>
+<label>Name</label>
+<input type="text" id="name">
+<br />
+<label>Email Address</label>
+<input type="email" id="email">
+<br />
+<label>Password</label>
+<input type="password" id="pass">
+<br />
+<label>Confirm Password</label>
+<input type="email" id="cpass">
+<br />
+<label>Phone Number</label>
+<input type="tel" id="phone">
+<br />
+<label>Address</label>
+<br />
+<textarea id="address"></textarea>
+<br />
+<label>Gender</label>
+<!--<select id="gender">
+	<option value="male">Male</option>
+	<option value="female">Female</option>
+	<option value="others">Others</option>
+</select>-->
+<input type="text" id="gender">
+<br />
+<label>Date of Birth</label><br/>
+<input type="date" id="date">
+<br /><br />
+<button class="bento-submit-btn" width="100">Submit</button>
+
+<br />
+<center><p style="font-size:20px;font-family:'Ubuntu-Bold'">Already have account?
+<a href="login" style="font-size:20px;font-family:'Ubuntu-Bold'"> Login</u></p></h2></center>
+</form>
+</div>
+</body>
+</html>

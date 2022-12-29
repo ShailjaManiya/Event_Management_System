@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Be Eventful-Just Plan it</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="#" class="logo" style="color:black;">BE EVENTFUL</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li ><a href="home">HOME</a></li>
+							<li><a href="about">About us</a></li>
+							<li><a href="logout">Log Out</a></li>
+							<li class="active"><a href="services">Profile</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<span><h1><p style="text-align: center;">Welcome {{username}}</p></h1></span>
+								</header>
+							</article>
+				<!-- Posts-->
+				
+					<article>
+						<header>
+							<h2><a href="wedding_event">WEDDINGS<br />
+							</a></h2>
+						</header>
+						<a href="wedding_event" class="image fit"><img src="{% static 'images/wedding.jpg' %}" alt="" /></a>
+						<p>With every last detail taken care of, we're here to ensure the day you've always dreamed of will be the day you'll never forget.</p>
+						<ul class="actions special">
+							<li><a href="wedding_event" class="button">Explore &#8608;</a></li>
+						</ul>
+					</article>
+                
+					<article>
+						<header>
+							<h2><a href="birthday_event">BIRTHDAYS<br />
+							</a></h2>
+						</header>
+						<a href="birthday_event" class="image fit"><img src="{% static 'images/birthday.jpg' %}" alt="" /></a>
+						<p>Wow your guests with a unique corporate experience that aligns with your company's mission and elevates your brand.</p>
+						<ul class="actions special">
+							<li><a href="birthday_event" class="button">Explore &#8608;</a></li>
+						</ul>
+					</article>
+					<article>
+						<header>
+							<h2><a href="corporate_event">CORPORATE EVENTS<br />
+							</a></h2>
+						</header>
+						<a href="corporate_event" class="image fit"><img src="{% static 'images/corporate.jpg' %}" alt="" /></a>
+						<p>Corporate events allow you to take the team somewhere new and exciting to stimulate the brain and think outside the box they work in.</p>
+						<ul class="actions special">
+							<li><a href="corporate_event" class="button">Explore &#8608;</a></li>
+						</ul>
+					</article>
+					<article>
+						<header>
+							<h2><a href="social_event">SOCIAL GATHERINGS<br />
+							</a></h2>
+						</header>
+						<a href="social_event" class="image fit"><img src="{% static 'images/social.jpg' %}" alt="" /></a>
+						<p>From a show stopping engagement celebration to an epic surprise birthday party, you dream it and we'll make it a reality.</p>
+						<ul class="actions special">
+							<li><a href="social_event" class="button">Explore &#8608;</a></li>
+						</ul>
+					</article>
+					<article>
+						<header>
+							<h2><a href="#">DJ<br />
+							</a></h2>
+						</header>
+						<a href="#" class="image fit"><img src="{% static 'images/dj.jpg' %}" alt="" /></a>
+						<p>Keep your feet on the ground, but let your head soar in the clouds.No matter what kind of music you’re in the mood for, we have it here.</p>
+						<ul class="actions special">
+							<li><a href="#" class="button">Explore &#8608;</a></li>
+						</ul>
+					</article>
+					<article>
+						<header>
+							<!--<span class="date">April 7, 2017</span>-->
+							<h2><a href="#">COLLEGE FEST<br />
+							</a></h2>
+						</header>
+						<a href="#" class="image fit"><img src="{% static 'images/college.jpg' %}" alt="" /></a>
+						<p>Do something for the foundation of your life Participation in college fest yes, war no It’s your festival Your college, your festivalYour life, your college, your way.</p>
+						<ul class="actions special">
+							<li><a href="#" class="button">Explore &#8608;</a></li>
+						</ul>
+					</article>
+                
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Feedback" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">beeventful@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+                <div id="copyright">
+		
+                    <ul><li style="color:black;">&copy; BE EVENTFUL</li><li style="color:black;">Design: <a href="#">JUST PLAN IT</a></li></ul>
+                </div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'js/jquery.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'js/browser.min.js' %}"></script>
+			<script src="{% static 'js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'js/util.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>

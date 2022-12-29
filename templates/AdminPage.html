@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Admin Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <noscript>
+        <link rel="stylesheet" href="{% static 'css/noscript.css' %}" />
+    </noscript>
+    <style>
+        table {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+
+        <!-- Header -->
+        <header id="header">
+            <a href="#" class="logo" style="color:black;">BE EVENTFUL ADMIN PAGE</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="AdminPage">HOME</a></li>
+                <li><a href="Admin_login">Logout</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Featured Post -->
+            <article class="post featured">
+                <header class="major">
+                    <span>
+                        <h1>Welcome <u>{{username}}</u></h1>
+                    </span>
+                </header>
+
+                <!--event regarding operations-->
+                <header class="major">
+                    <span class="date"><font style="font-size: 28px;color:deeppink;">EVENT</font></span>
+                </header>
+                <table style="text-align:center;">
+                    <tr>
+                        <td>
+                            <a href="event_form"><button class="btn btn1" style="align-content:center;font-size:large;">Add
+                            Event&nbsp;&nbsp;&nbsp;</button></a><br /><br />
+                        </td>
+                        <td>
+                            <a href="event_list"><button class="btn btn1" style="align-content:center;font-size:large;">Event
+                            List&nbsp;&nbsp;&nbsp;</button></a><br /><br />
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <!--staff regarding operations-->
+                <header class="major">
+                    <span class="date"><font style="font-size: 28px;color:deeppink;">STAFF</font></span>
+                </header>
+                <table style="text-align:center;">
+                    <tr>
+                        <td>
+                            <a href="staff_form"><button class="btn btn1" style="align-content:center;font-size:large;">Add
+                            Staff&nbsp;&nbsp;&nbsp;</button></a><br /><br />
+                        </td>
+                        <td>
+                            <a href="staff_list"><button class="btn btn1" style="align-content:center;font-size:large;">Staff
+                            List&nbsp;&nbsp;&nbsp;</button></a><br /><br />
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <!--booking regarding operations-->
+                <header class="major">
+                    <span class="date"><font style="font-size: 28px;color:deeppink;">BOOKING</font></span>
+                </header>
+                <table style="text-align:center;">
+                    <tr>
+                        <td>
+                            <a href="booking_list"><button class="btn btn1" style="align-content:center;font-size:large;">Pending Booking List&nbsp;&nbsp;&nbsp;</button></a><br /><br />
+                        </td>
+                        <td>
+                            <a href="ApprovedBooking_list"><button class="btn btn1" style="align-content:center;font-size:large;">Approved Booking list&nbsp;&nbsp;&nbsp;</button></a><br /><br />
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <!--Feedback regarding operations-->
+                <header class="major">
+                    <span class="date"><font style="font-size: 28px;color:deeppink;">FEEDBACK</font></span>
+                </header>
+                <table style="text-align:center;">
+                    <tr>
+                        <td>
+                            <a href="feedback_list"><button class="btn btn1" style="align-content:center;font-size:large;">Pending Feedback List&nbsp;&nbsp;&nbsp;</button></a><br /><br />
+                        </td>
+                        <td>
+                            <a href="ApprovedFeedback_list"><button class="btn btn1" style="align-content:center;font-size:large;">Approved Feedback list&nbsp;&nbsp;&nbsp;</button></a><br /><br />
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Footer -->
+                <footer id="footer">
+                    <section>
+                        <form method="post" action="#">
+                            <div class="fields">
+                                <div class="field">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" />
+                                </div>
+                                <div class="field">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Feedback" /></li>
+                            </ul>
+                        </form>
+                    </section>
+                    <section class="split contact">
+                        <section class="alt">
+                            <h3>Address</h3>
+                            <p>1234 Somewhere Road #87257<br />
+                                Nashville, TN 00000-0000</p>
+                        </section>
+                        <section>
+                            <h3>Phone</h3>
+                            <p><a href="#">(000) 000-0000</a></p>
+                        </section>
+                        <section>
+                            <h3>Email</h3>
+                            <p><a href="#">beeventful@untitled.tld</a></p>
+                        </section>
+                        <section>
+                            <h3>Social</h3>
+                            <ul class="icons alt">
+                                <li><a href="#" class="icon brands alt fa-twitter"><span
+                                            class="label">Twitter</span></a>
+                                </li>
+                                <li><a href="#" class="icon brands alt fa-facebook-f"><span
+                                            class="label">Facebook</span></a></li>
+                                <li><a href="#" class="icon brands alt fa-instagram"><span
+                                            class="label">Instagram</span></a></li>
+                                <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </section>
+                </footer>
+
+                <!-- Copyright -->
+                <div id="copyright">
+
+                    <ul>
+                        <li style="color:black;">&copy; BE EVENTFUL</li>
+                        <li style="color:black;">Design: <a href="#">JUST PLAN IT</a></li>
+                    </ul>
+                </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+        <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+        <script src="{% static 'js/browser.min.js' %}"></script>
+        <script src="{% static 'js/breakpoints.min.js' %}"></script>
+        <script src="{% static 'js/util.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>

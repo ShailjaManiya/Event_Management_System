@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Be Eventful-Just Plan it</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <noscript>
+        <link rel="stylesheet" href="{% static 'css/noscript.css' %}" />
+    </noscript>
+
+    <style>
+        tr:hover 
+        td{
+            background-color:#A8A8A8;
+        }
+
+        .btn:hover
+        {
+        background-image:none;
+        background-color:white;
+        }
+        
+    </style>
+
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="#" class="logo" style="color:black;">BE EVENTFUL</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="home">HOME</a></li>
+                <li><a href="about">About us</a></li>
+                <li><a href="logout">Log Out</a></li>
+                <li class="active"><a href="#">Profile</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Posts-->
+            <article>
+                <header>
+                    <h2 style="text-align: center;"><a href="#">CORPORATE EVENT OFFERS AVAILABLE<br />
+                        </a></h2>
+                </header>
+                <a href="social_event" class="image fit"><img src="{% static 'images/social_card.jpg' %}"
+                        alt="" /></a>
+            </article>
+            <h2 style="font-size:20px;word-spacing:5px;">&#10077;&nbsp;We provide Service with a personal touch.Every idea and plan of ours is customised and constructed keeping the specific client in mind. Our clients are our main priority.&nbsp;&#10078;</h2><br/><br/>
+            <table border="2px" style="text-align:center;font-size:18px;">
+                <tr style="font-weight: bold;">
+                    <td>No. of Days</td>
+                    <td>Guest Count</td>
+                    <td>Price</td>
+                    <td>Description</td>
+                    <td></td>
+                </tr>
+                <tbody>
+                    {% for eve in event_list %}
+                    <tr>
+                        <td>{{eve.NumberOfDays}}</td>
+                        <td>{{eve.GuestCount}}</td>
+                        <td>{{eve.Price}}</td>
+                        <td>{{eve.Description}}</td>
+                        <td><button class="btn btn-danger">BOOK NOW</button></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br/><br/>
+            <a href="After_login"><button class="btn btn-danger">BACK</button></a>
+            <!-- Footer -->
+        <footer>
+            <h3>FOLLOW US ON SOCIAL MEDIA PLATFORMS</h3>
+            <ul class="icons alt">
+                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a>
+                </li>
+                <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
+                </li>
+                <li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+            </section>
+            </section>
+        </footer>
+
+        <!-- Copyright -->
+        <div id="copyright">
+
+            <ul>
+                <li style="color:black;">&copy; BE EVENTFUL</li>
+                <li style="color:black;">Design: <a href="#">JUST PLAN IT</a></li>
+            </ul>
+        </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/jquery.scrollex.min.js' %}"></script>
+        <script src="{% static 'js/jquery.scrolly.min.js' %}"></script>
+        <script src="{% static 'js/browser.min.js' %}"></script>
+        <script src="{% static 'js/breakpoints.min.js' %}"></script>
+        <script src="{% static 'js/util.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
